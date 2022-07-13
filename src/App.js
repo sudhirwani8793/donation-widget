@@ -3,7 +3,7 @@ import { PaymentContext } from './data/context';
 import { authContext } from './data/authContext';
 import { ContextProvider } from "./context";
 import { homePageService } from "./jwt/_services/home-page-service";
-import './assets/css/style.css';
+// import './assets/css/style.css';
 import { CognitoUser, AuthenticationDetails } from "amazon-cognito-identity-js";
 import { EMAIL_AWS_COGNITO, PASSWORD_AWS_COGNITO, USER_NAME_AWS_COGNITO, } from "./common";
 import authAwsPool from "./aws-pool/auth-aws";

@@ -1,7 +1,7 @@
 import React from 'react';
 // import Banner from '../section/banner/banner';
-import '../assets/css/slick.min.css';
-import '../assets/css/slick-theme.min.css';
+// import '../assets/css/slick.min.css';
+// import '../assets/css/slick-theme.min.css';
 import DonationWidget from './donation-widget';
 
 class NGS extends React.Component {
