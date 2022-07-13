@@ -1,0 +1,2 @@
+
+export {MyApp} from  './src' ;
