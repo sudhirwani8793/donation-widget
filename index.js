@@ -1,2 +1,1 @@
-
-export {MyApp} from  './src' ;
+export { default as MyApp } from './src';
