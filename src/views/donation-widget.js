@@ -358,7 +358,7 @@ class DonationWidget extends React.Component {
 
     render() {
         return (
-            <>
+            <div>
                 {
                     this.state.amoutOptions.length ?
                         <div className="sec-donation form">
@@ -380,7 +380,7 @@ class DonationWidget extends React.Component {
                                 }
                             </div>
 
-                            {this.state.regularFrequencyOptions.length <= 0 ? <> </> :
+                            {this.state.regularFrequencyOptions.length <= 0 ? null :
                                 <div className="frequency">
                                     <div className="title">Donation Frequency</div>
                                     <div ref={this.refFrequency} className="type">
@@ -426,7 +426,7 @@ class DonationWidget extends React.Component {
                         :
                         null
                 }
-            </>
+            </div>
         )
     }
 }
