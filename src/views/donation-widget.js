@@ -339,7 +339,7 @@ class DonationWidget extends React.Component {
 
                     if (Common.isValidField(this.refFixedDonationAmount.current)) {
                         this.refFixedDonationAmount.current.childNodes.forEach((item) => {
-                            if ((CURRENCY_SYMBOL + (parseFloat(response.donationAmounts[response.defaultAmountPosition ?? 0]) ?? 0)) === item.innerText) {
+                            if ((CURRENCY_SYMBOL + (parseFloat(response.donationAmounts[response.defaultAmountPosition]))) === item.innerText) {
                                 item.classList.add('selected');
                                 this.refDonateNowBtn.current.removeAttribute('disabled');
                             } else {
