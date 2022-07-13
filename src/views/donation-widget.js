@@ -5,7 +5,6 @@ import { homePageService } from '../jwt/_services/home-page-service';
 import { Common } from '../common/common';
 
 class DonationWidget extends React.Component {
-    static contextType = PaymentContext;
     constructor(props) {
         super(props);
         this.state = {
