@@ -1,3 +1,16 @@
+// {
+//   "presets": ["react"]
+// }
+
 {
-  "presets": ["react"]
+  "presets": [
+    [
+      "env",
+    {
+      "modules": false
+    }
+ ],
+    "react",
+    "stage-0"
+  ]
 }

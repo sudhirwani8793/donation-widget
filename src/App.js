@@ -5,9 +5,9 @@ import { ContextProvider } from "./context";
 import { homePageService } from "./jwt/_services/home-page-service";
 import './assets/css/style.css';
 import { CognitoUser, AuthenticationDetails } from "amazon-cognito-identity-js";
-import { EMAIL_AWS_COGNITO, PASSWORD_AWS_COGNITO, USER_NAME_AWS_COGNITO, } from "../src/common";
-import authAwsPool from "../src/aws-pool/auth-aws";
-import NGS from "../src/views";
+import { EMAIL_AWS_COGNITO, PASSWORD_AWS_COGNITO, USER_NAME_AWS_COGNITO, } from "./common";
+import authAwsPool from "./aws-pool/auth-aws";
+import NGS from "./views";
 // const NGS = lazy(() => import('./views/'));
 
 class DonationComponent extends React.Component {
