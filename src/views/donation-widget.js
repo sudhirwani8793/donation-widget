@@ -62,9 +62,8 @@ class DonationWidget extends React.Component {
     }
 
     onChangeDonationAmount(e) {
-        let ele = e.target;
-        // console.log("ele.value : " + parseFloat(ele.value.replace('$', '').match(/[0-9]*\.[0-9][0-9]/g)?.join('')) ? ele.value : parseInt(ele.value.replace('$', '').match(/[0-9]*\.[0-9][0-9]/g)?.join('')));
-        let val = parseFloat(ele.value.replace('$', '').match(/^[0-9]$/g)?.join(''));
+        let ele = e.target;        
+        let val = parseFloat(ele.value.replace('$', '').match(/^[0-9]$/g).join(''));
         if (ele.value.includes('.')) {
             if (ele.value.split('.').length > 2) {
                 // Remove . if more than 1 was found
@@ -88,14 +87,14 @@ class DonationWidget extends React.Component {
 
         ele.value.toString().includes('.') ? ele.setAttribute('maxlength', 11) : ele.setAttribute('maxlength', 8);
 
-        if (parseFloat(ele.value.replace('$', '').match(/[0-9]*\.[0-9][0-9]/g)?.join(''))) {
-            val = parseFloat(ele.value.replace(/[$,]/gi, '').match(/[0-9]*\.[0-9][0-9]/g)?.join('')).toFixed(2)
+        if (parseFloat(ele.value.replace('$', '').match(/[0-9]*\.[0-9][0-9]/g).join(''))) {
+            val = parseFloat(ele.value.replace(/[$,]/gi, '').match(/[0-9]*\.[0-9][0-9]/g).join('')).toFixed(2)
         }
         else {
-            if (parseFloat(ele.value.replace('$', '').match(/[0-9]*\.[0-9]/g)?.join(''))) {
-                val = parseFloat(ele.value.replace(/[$,]/gi, '').match(/[0-9]*\.[0-9]/g)?.join(''));
+            if (parseFloat(ele.value.replace('$', '').match(/[0-9]*\.[0-9]/g).join(''))) {
+                val = parseFloat(ele.value.replace(/[$,]/gi, '').match(/[0-9]*\.[0-9]/g).join(''));
             } else {
-                val = parseInt(ele.value.replace(/[$,]/gi, '').match(/[0-9]/g)?.join(''));
+                val = parseInt(ele.value.replace(/[$,]/gi, '').match(/[0-9]/g).join(''));
             }
         }
 
@@ -224,7 +223,7 @@ class DonationWidget extends React.Component {
 
     handleKeyPress(e) {
 
-        let PaymentContext = this.context?.PaymentContext;
+        let PaymentContext = this.context.PaymentContext;
 
         let val = e.target.value;
         val = parseInt(val.replace(/[$,]/gi, ''));
@@ -238,7 +237,7 @@ class DonationWidget extends React.Component {
         let eleDonationAmount = this.refDonationAmount.current;
         let val = eleDonationAmount.value.trim().substr(1);
         val = val.indexOf(',') !== -1 ? val.replace(',', '') : val;
-        let PaymentContext = this.context?.PaymentContext;
+        let PaymentContext = this.context.PaymentContext;
         let method = PaymentContext.donationMethod;
 
         if (eleDonationAmount.value.trim() && val) {
